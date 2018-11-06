@@ -20,8 +20,16 @@ module.exports = {
         }
       },
       {
-        test: /\.(.css|sass|scss)$/,
-        use: ['sass-loader', 'style-loader', 'css-loader']
+        test: /\.(sass|scss|css)$/,
+        loader: 'style-loader'
+      },
+      {
+        test: /\.(sass|scss|css)$/,
+        loader: 'css-loader',
+        query: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]'
+        }
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
