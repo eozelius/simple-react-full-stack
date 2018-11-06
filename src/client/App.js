@@ -1,13 +1,10 @@
 import React from 'react';
-import './styles/app.scss';
+import LambdaMap from './components/LambdaMap';
+import style from './styles/app.scss';
 
-const App = props => (
-  <div>
-    <h2>Hello world</h2>
-    <p>
-      props:
-      {JSON.stringify(props)}
-    </p>
+const App = () => (
+  <div className={style.app}>
+    <LambdaMap />
   </div>
 );
 
