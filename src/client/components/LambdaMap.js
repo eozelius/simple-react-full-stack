@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import style from '../styles/hexigon.scss';
-// import LambdaHexagon from './LambdaHexagon';
 
 export default class extends Component {
   constructor(props) {
