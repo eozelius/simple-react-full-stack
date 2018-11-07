@@ -21,7 +21,8 @@
     "node-sass": "^4.10.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "prop-types": "^15.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
