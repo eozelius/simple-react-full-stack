@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
-import style from '../styles/hexigon.scss';
+import style from '../styles/LambdaMap.scss';
+import Hexagon from './Hexagon';
 
 export default class extends Component {
   constructor(props) {
@@ -82,33 +83,19 @@ export default class extends Component {
   }
 
   render() {
+    // Be care editing this as it is already a nested loop.
     const fourteenTimes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-
-    const renderedHexagons = fourteenTimes.map((x) => {
-      const sixTimes = [1, 2, 3, 4, 5, 6];
-
-      const hexagons = sixTimes.map(y => (
-        <a className={style.hex} key={y}>
-          <div className={style.wrapper}>
-            <div className={`${style.hexagon} ${style.color1}`} />
-          </div>
-          <span className={style.content}>
-            <strong>Hello!</strong>
-            <small>i&#39;m a hexagon</small>
-          </span>
-        </a>
-      ));
-
-      return (
-        <div className={`hexes-${x} ${style.column}`} key={x}>
-          {hexagons}
-        </div>
-      );
-    });
+    const lambdaFleet = fourteenTimes.map(x => (
+      <div className={`hexes-${x} ${style.column}`} key={x}>
+        {[1, 2, 3, 4, 5, 6].map(y => (
+          <Hexagon key={y} />
+        ))}
+      </div>
+    ));
 
     return (
       <div className={style.container}>
-        <div className={style.honeycomb}>{renderedHexagons}</div>
+        <div className={style.honeycomb}>{lambdaFleet}</div>
       </div>
     );
   }

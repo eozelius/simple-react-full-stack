@@ -1,0 +1,68 @@
+body {
+  background-color: black;
+}
+
+.container {
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  height: 500px;
+  -webkit-perspective: 700px;
+  perspective: 700px;
+  z-index: 10;
+  overflow: hidden;
+}
+.honeycomb {
+  display: block;
+  position: absolute;
+  margin-left: -465px;
+  padding-left: 18px;
+  left: 50%;
+  text-align: center;
+  height: 450px;
+  width: 930px;
+  -ms-transform: rotateX(55deg) rotateY(0deg);
+  -webkit-transform: rotateX(55deg) rotateY(0deg);
+  transform: rotateX(55deg) rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -ms-transform-origin: center 65%;
+  -webkit-transform-origin: center 65%;
+  transform-origin: center 65%;
+  z-index: 5;
+}
+
+.column {
+  display: block;
+  float: left;
+  width: 62px;
+}
+/* .container .honeycomb .column:nth-child(odd) { */
+.column:nth-child(odd) {
+  margin-top: 36px;
+}
+
+/*
+  Cannot find any elements with the class 'shadows', so commenting for now.
+.container .honeycomb .shadows {
+  display: block;
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  height: 130%;
+  width: 130%;
+  background-image: -webkit-radial-gradient(closest-side, rgba(23, 29, 37, 0), #171d25);
+  background-image: radial-gradient(closest-side, rgba(23, 29, 37, 0), #171d25);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+
+  -ms-transform: translateZ(10px);
+  -webkit-transform: translateZ(10px);
+  transform: translateZ(10px);
+  pointer-events: none;
+}
+*/
+
+.hidden {
+  display: none;
+}
